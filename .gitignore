@@ -1,0 +1,9 @@
+# ignore
+
+homebrew/
+flutter/
+configstore/
+cmdline/
+histfile/n.
+
+*.DS_Store
