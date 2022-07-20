@@ -83,6 +83,7 @@ zstyle ":completion:*" verbose yes
 # zstyle ":completion:*" use-cache on
 # zstyle ":completion:*" hosts off
 
+alias m="micro"
 alias l="ls -lhAGF"
 alias rm="rm -drf"
 alias t="tree --dirsfirst --sort=name -LlaC 1"
@@ -371,6 +372,10 @@ function z {
 	source $HOME/.zshrc
 }
 
+function theme {
+	osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to not dark mode'
+}
+
 function path {
 	if [[ -d "$1" ]] ; then
 		if [[ -z "$PATH" ]] ; then
@@ -380,14 +385,13 @@ function path {
 		fi
   	fi
 }
-	
 export PATH=""
+path "/bin"
+path "/sbin"
+path "/usr/bin"
+path "/usr/sbin"
+path "/usr/local/bin"
+path "/usr/local/sbin"
 path "${HOME}/.config/homebrew/bin"
 path "${HOME}/.config/cmdline/flutter/bin"
 path "${HOME}/.config/cmdline/android/bin"
-path "/usr/local/sbin"
-path "/usr/local/bin"
-path "/usr/sbin"
-path "/usr/bin"
-path "/sbin"
-path "/bin"
