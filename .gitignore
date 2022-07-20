@@ -1,9 +1,10 @@
 # ignore
 
+gh/
 homebrew/
 flutter/
 configstore/
 cmdline/
-histfile/n.
+histfile
 
 *.DS_Store
